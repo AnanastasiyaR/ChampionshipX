@@ -2,11 +2,14 @@ import pygame
 import sys
 import pygame_widgets
 from pygame_widgets.button import Button
+import random
 import time
 from pygame.locals import *
 #import pygame_menu
 
 
+
+######################
 pygame.init()
 #pygame.display.set_mode
 
@@ -87,10 +90,7 @@ while not game_over:
    for event in pygame.event.get():
     if event.type==pygame.QUIT:
       game_over=True# выводит на экран все действия игры
-    if event.type == pygame.MOUSEBUTTONDOWN:
-              if 170 <= mouse[0] <= 180 and 545 <= mouse[1] <= 550:
-                    event_handler.load() 
-   mouse = pygame.mouse.get_pos() 
+    
    screen.blit(background_image, background_position) 
    pygame_widgets.update(event) 
    sc.blit(surf, rect)
